@@ -8,7 +8,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <Router>
-      <div className=" min-h-screen bg-black text-white">
+      <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
           <Routes>
@@ -19,7 +19,6 @@ function App() {
         </main>
         <Footer />
       </div>
-
     </Router>
   );
 }
