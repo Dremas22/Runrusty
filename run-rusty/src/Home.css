@@ -1,0 +1,66 @@
+.home-container {
+    min-height: 100vh;
+    padding: 80px 20px;
+    background-color: #ffffffeb;
+    /* white background */
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #111;
+    /* dark text for readability */
+}
+
+.home-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #d62828;
+    /* brand red */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.home-description {
+    max-width: 800px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #222;
+}
+
+.home-section-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #d62828;
+    text-transform: uppercase;
+}
+
+.home-vision-mission {
+    text-align: left;
+    max-width: 800px;
+    margin-top: 40px;
+    background-color: #000;
+    /* black card */
+    padding: 30px 40px;
+    border-left: 6px solid #d62828;
+    border-radius: 10px;
+    color: #fff;
+    /* white text on black */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d62828;
+    margin-bottom: 10px;
+}
+
+.home-vision-mission p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
