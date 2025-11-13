@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 export default function Services() {
+    // Array of image paths (1–17)
+    const productImages = Array.from({ length: 16 }, (_, i) => `/pic${i + 1}.jpeg`);
+
+    // State for modal
+    const [selectedImage, setSelectedImage] = useState(null);
+
     return (
         <section className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white px-6 py-16 flex flex-col items-center">
             {/* Header Section */}
@@ -62,7 +70,6 @@ export default function Services() {
                 {/* Accessories */}
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-md hover:shadow-xl hover:bg-white/10 transition duration-300">
                     <h2 className="text-2xl font-bold text-red-500 mb-3">Accessories</h2>
-
                     <p className="text-gray-300 leading-relaxed">
                         Complement your look with our branded accessories such as tote bags,
                         beanies, and caps — all customizable to your brand or personal style.
@@ -71,9 +78,7 @@ export default function Services() {
 
                 {/* For Schools */}
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-md hover:shadow-xl hover:bg-white/10 transition duration-300">
-
                     <h2 className="text-2xl font-bold text-red-500 mb-3">For Schools</h2>
-
                     <p className="text-gray-300 leading-relaxed">
                         We offer matric jackets, T-shirts, sportswear, tracksuits, golfer
                         T-shirts, hoodies, sweaters, corporate uniforms, beanies, caps, and
@@ -81,6 +86,54 @@ export default function Services() {
                     </p>
                 </div>
             </div>
+
+            {/* Product Gallery Section */}
+            <div className="mt-20 w-full max-w-6xl">
+                <h2 className="text-3xl sm:text-4xl font-bold text-center text-red-600 mb-8">
+                    Product Gallery
+                </h2>
+                <p className="text-center text-gray-400 mb-10">
+                    Take a look at some of the apparel and branding work we’ve created for our clients.
+                </p>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {productImages.map((src, index) => (
+                        <div
+                            key={index}
+                            className="overflow-hidden rounded-xl border border-white/10 bg-white/5 hover:scale-105 hover:bg-white/10 transition-transform duration-300 shadow-md cursor-pointer"
+                            onClick={() => setSelectedImage(src)}
+                        >
+                            <img
+                                src={src}
+                                alt={`Product ${index + 1}`}
+                                className="w-full h-52 object-cover"
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Modal / Lightbox */}
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 bg-black flex items-center justify-center z-50 p-4 animate-fadeIn"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <div className="relative max-w-4xl w-full">
+                        <img
+                            src={selectedImage}
+                            alt="Enlarged product"
+                            className="rounded-xl w-full h-auto max-h-[85vh] object-contain border border-white/10"
+                        />
+                        <button
+                            onClick={() => setSelectedImage(null)}
+                            className="absolute top-4 right-4 bg-red-600 hover:bg-red-700 text-white rounded-full px-3 py-1 text-sm font-semibold transition"
+                        >
+                            ✕ Close
+                        </button>
+                    </div>
+                </div>
+            )}
 
             {/* Footer Note */}
             <div className="mt-16 text-center">
