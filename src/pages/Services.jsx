@@ -47,7 +47,7 @@ export default function Services() {
     ];
 
     return (
-        <section className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white px-6 py-16 flex flex-col items-center">
+        <section className="min-h-screen pt-25 bg-gradient-to-b from-black via-gray-900 to-black text-white px-6 py-16 flex flex-col items-center">
             <div className="max-w-6xl w-full">
                 <h1 className="text-4xl sm:text-5xl font-extrabold text-red-600 mb-12 text-center">
                     Our Services

@@ -22,7 +22,7 @@ export default function BannerCarousel() {
     }, [current]);
 
     return (
-        <div className="w-full h-[45vh] md:h-[60vh] overflow-hidden relative">
+        <div className="w-full md:h-[80vh] h-[45vh] overflow-hidden relative">
             {/* Slides */}
             <div
                 className="flex transition-transform duration-700"
@@ -31,7 +31,7 @@ export default function BannerCarousel() {
                 {images.map((src, index) => (
                     <div
                         key={index}
-                        className="min-w-full h-[45vh] md:h-[60vh] bg-cover bg-center"
+                        className="min-w-full lg:h-[75vh] md:h-[60vh] h-[45vh]  bg-cover bg-center"
                         style={{ backgroundImage: `url(${src})` }}
                     ></div>
                 ))}
@@ -59,7 +59,7 @@ export default function BannerCarousel() {
                     <div
                         key={index}
                         onClick={() => setCurrent(index)}
-                        className={`w-3 h-3 rounded-full cursor-pointer transition ${current === index ? "bg-red-600" : "bg-white/40"
+                        className={`w-3 h-3 rounded-full cursor-pointer transition ${current === index ? "bg-red-600" : "bg-black/40"
                             }`}
                     ></div>
                 ))}
