@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 
 export default function BannerCarousel() {
-    const images = ["/pic2.jpeg", "/pic12.jpeg"];
+    const images = ["/bannerpic1.jpeg", "/bannerpic2.jpeg", "/bannerpic3.jpeg", "/bannerpic4.jpeg"];
     const [current, setCurrent] = useState(0);
     const timeoutRef = useRef(null);
 
