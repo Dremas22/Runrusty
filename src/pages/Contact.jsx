@@ -10,7 +10,7 @@ export default function Contact() {
         const fullMessage = `Hello, my name is ${name}. My number is ${phone}. ${message}`;
         const encodedMessage = encodeURIComponent(fullMessage);
 
-        const whatsappNumber = "27812453516";
+        const whatsappNumber = "27721441392";
 
         window.open(
             `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
@@ -91,7 +91,7 @@ export default function Contact() {
                         href="mailto:info@runrusty.co.za"
                         className="text-red-500 hover:underline"
                     >
-                        info@runrusty.co.za
+                        Werunrusty@gmail.com
                     </a>
                 </p>
             </div>

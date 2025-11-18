@@ -1,4 +1,4 @@
-import { FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
     return (
@@ -22,6 +22,15 @@ export default function Footer() {
                     aria-label="Facebook"
                 >
                     <FaFacebook size={24} />
+                </a>
+                <a
+                    href="https://www.instagram.com/run_rusty/?hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-red-600 hover:text-red-400 transition"
+                    aria-label="Instagram"
+                >
+                    <FaInstagram size={24} />
                 </a>
             </div>
         </footer>
