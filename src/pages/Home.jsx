@@ -2,9 +2,10 @@ import BannerCarousel from "../components/BannerCarousel";
 
 export default function Home() {
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center px-6 py-16 bg-white text-gray-900">
+        <section className="min-h-screen pt-25 flex flex-col items-center justify-center px-6 py-16 bg-white text-gray-900">
 
             {/* 🚀 Banner Carousel */}
+            <div></div>
             <BannerCarousel />
 
             {/* Title */}
@@ -46,18 +47,49 @@ export default function Home() {
             </div>
 
             {/* Vision & Mission Section */}
-            <div className="mt-16 max-w-4xl bg-black text-white p-8 md:p-12 rounded-2xl shadow-lg border-l-8 border-red-600">
-                <h2 className="text-3xl font-bold text-red-600 mb-4">Vision</h2>
-                <p className="text-lg leading-relaxed mb-8">
-                    To become South Africa’s leading urban fashion brand known for creativity,
-                    quality, and cultural expression.
-                </p>
+            <div className="mt-16 max-w-6xl w-full flex flex-col gap-16">
+                {/* Vision */}
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                    {/* Image */}
+                    <div className="relative w-full md:w-1/2 h-[300px] md:h-[400px] flex-shrink-0">
+                        <img
+                            src="/vision.jpeg"
+                            alt="Vision"
+                            className="w-full h-full object-cover rounded-xl shadow-md"
+                        />
+                    </div>
 
-                <h2 className="text-3xl font-bold text-red-600 mb-4">Mission</h2>
-                <p className="text-lg leading-relaxed">
-                    To empower individuals and businesses to express their identity through
-                    unique, high-quality customized apparel and branding solutions — promoting innovation, collaboration, and authenticity.
-                </p>
+                    {/* Text */}
+                    <div className="md:w-1/2">
+                        <h2 className="text-3xl font-bold text-red-600 mb-4">Vision</h2>
+                        <p className="text-lg leading-relaxed">
+                            To become South Africa’s leading urban fashion brand known for creativity,
+                            quality, and cultural expression.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Mission */}
+                <div className="flex flex-col md:flex-row items-center gap-8 md:flex-row-reverse">
+                    {/* Image */}
+                    <div className="relative w-full md:w-1/2 h-[300px] md:h-[400px] flex-shrink-0">
+                        <img
+                            src="/mission.jpeg"
+                            alt="Mission"
+                            className="w-full h-full object-cover rounded-xl shadow-md"
+                        />
+                    </div>
+
+                    {/* Text */}
+                    <div className="md:w-1/2">
+                        <h2 className="text-3xl font-bold text-red-600 mb-4">Mission</h2>
+                        <p className="text-lg leading-relaxed">
+                            To empower individuals and businesses to express their identity through
+                            unique, high-quality customized apparel and branding solutions —
+                            promoting innovation, collaboration, and authenticity.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             {/* Footer Quote */}

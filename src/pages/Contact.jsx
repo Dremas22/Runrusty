@@ -19,7 +19,7 @@ export default function Contact() {
     };
 
     return (
-        <section className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white px-6 py-16 flex flex-col items-center justify-center">
+        <section className="min-h-screen bg-gradient-to-b pt-25 from-black via-gray-900 to-black text-white px-6 py-16 flex flex-col items-center justify-center">
             {/* Header */}
             <div className="text-center mb-10">
                 <h1 className="text-4xl sm:text-5xl font-extrabold text-red-600 mb-4">
