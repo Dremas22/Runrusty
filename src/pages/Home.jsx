@@ -1,8 +1,14 @@
+import BannerCarousel from "../components/BannerCarousel";
+
 export default function Home() {
     return (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 py-16 bg-white text-gray-900">
+
+            {/* 🚀 Banner Carousel */}
+            <BannerCarousel />
+
             {/* Title */}
-            <h1 className="text-5xl md:text-6xl font-extrabold text-red-600 mb-8 tracking-wide text-center">
+            <h1 className="text-5xl md:text-6xl font-extrabold text-red-600 mt-16 mb-8 tracking-wide text-center">
                 Run Rusty
             </h1>
 
@@ -50,8 +56,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold text-red-600 mb-4">Mission</h2>
                 <p className="text-lg leading-relaxed">
                     To empower individuals and businesses to express their identity through
-                    unique, high-quality customized apparel and branding solutions —
-                    promoting innovation, collaboration, and authenticity.
+                    unique, high-quality customized apparel and branding solutions — promoting innovation, collaboration, and authenticity.
                 </p>
             </div>
 
